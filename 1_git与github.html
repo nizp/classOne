@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+<script type="text/git">
+	A   ->  1.0版本
+	B	->  2.0版本
+	
+	旧系统 -> 功能完整
+	新系统 -> 功能完整(不太确定)
+	
+	概念
+		git
+			
+			工具，版本控制
+			
+		github
+			***网站，社交平台，开源项目，远程仓库
+			
+		svn与git区别
+		集成式
+			有个中央服务器，所有的版本都要通过中央服务器进行控制。
+		
+		分布式
+			每个计算机都是台版本控制器，不需要网络就能进行版本控制。	
+		
+		github作用
+			存储版本的远程仓库
+			
+		git + github
+		git + 码云
+		git + gitlab
+		
+		
+		新建项目：
+			在github上，有个加号，第一个就是新建项目
+			填写项目名称、项目的描述、（勾选）README.md -> 点击创建按钮
+			
+			
+		cd命令进入目录  比如:c/github5/2016-11-16（空文件夹）
+			第一种：
+				cd c:
+				cd github5
+					查看文件：
+						ll 或者  ls 查看
+						
+				cd 2016-11-16
+			第二种：
+				cd c:\github5\2016-11-16
+			
+			
+			小技巧：
+				可以通过tab键自动补全
+				
+				cd .. 返回上一层目录
+				
+				按方向上键重新查找上一次回话输入的命令
+				
+			git clone 远程地址。
+			
+		
+		git的三个区
+			工作区（本地）
+			暂存区
+				作为过渡层
+				避免误操作
+				保护工作区和版本区
+				分支处理
+			版本区（库）
+	
+		在工作区创建一个文件去查看状态（git status） 显示红色
+		
+		将工作区放到暂存区
+			git add 文件名
+		
+		将暂存区放到版本区
+			git commit -m "注释"
+			
+		查看版本：
+			git log(如果出现:号，按q键返回)
+		
+		
+		对比：
+			查看暂存区与工作区的差异：
+				git diff
+			
+			查看暂存区与版本区的差异：
+				git diff --cached
+			
+			查看本地与版本区的差异：
+				git diff master
+				
+		撤销：
+			暂存区的控制撤销到工作区
+				git reset HEAD 文件名
+			
+			工作区代码还原成暂存区或版本区
+				git checkout -- 文件名 
+				
+			如果有2个以上文件，一个提交到版本库了，
+			另一个忘记提交，可以先将没提交的文件拉到缓存区，
+			然后通过
+				git commit -m "注释" --amend 撤销回来，
+				最后自动一次性提交暂存区中的所有文件，
+				git log查看是否提交成功
+		
+		小技巧：
+			快速增加多个文件到暂存区：
+				git add .
+			
+			快速版本控制：
+				git commit -a -m "注释"
+				
+			清除：
+				clear
+		
+		删除：
+			前提本地删除的时候，也想删除暂存区
+				git rm 文件名
+			
+			
+			一次性删除暂存区及本地：
+				git rm -f 文件名
+				
+			不想删除本地，只想删除暂存区
+				git rm --cached 文件名
+		
+		恢复（回滚）：
+			回滚指定文件：
+				git checkout 文件名
+			
+			回滚指定版本文件：
+				git checkout 版本号（5位） 文件名
+				
+			回滚所有整个版本的文件：
+				git reset --hard 版本号
+				
+			git reflog 查看已经操作过的历史记录
+			
+			回滚当前历史记录的上一个记录
+				git reset --hard HEAD^
+			
+			回滚当前历史记录的上几个记录
+				git reset --hard HEAD~2
+			
+			
+		同步远程仓库：
+			git push origin master
+			
+			origin : 远程仓库的名字（默认的）
+				查看远程仓库的名字：
+					git remote
+			
+			git remote -v 可以查看拉取下来的地址和推送的地址是否保持一致。
+			
+			
+			
+			
+
+
+			
+			
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			字符串：
+				substring(start,end(但不包含结束位置))
+				<!--substr(start,num)
+				slice
+				charAt-->
+				
+				replace
+				
+				indexOf
+				<!--lastIndexOf-->
+				
+				toLowerCase
+				toUpperCase
+				
+				split
+				trim
+				
+				
+			
+		
+			
+			
+		
+		
+				
+			
+			
+
+	
+</script>
+</body>
+</html>
